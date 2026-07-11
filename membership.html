@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TMS உறுப்பினர் பதிவு</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f2f2f2;
+    margin:0;
+    padding:20px;
+}
+.container{
+    max-width:700px;
+    margin:auto;
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+h2,h3{
+    text-align:center;
+    color:green;
+}
+label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+input,select,textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    background:green;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    font-size:18px;
+    cursor:pointer;
+}
+button:hover{
+    background:#006400;
+}
+</style>
+
+</head>
+
+
+<script type="module">
+
+import { db } from "./js/firebase.js";
+
+import {
+  collection,
+  addDoc,
+  getDocs
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+const form = document.getElementById("memberForm");
+
+form.addEventListener("submit", async (e) => {
+
+  e.preventDefault();
+
+  const members = await getDocs(collection(db, "members"));
+
+  const memberNo =
+    "TMS-2026-" + String(members.size + 1).padStart(4, "0");
+
+  await addDoc(collection(db, "members"), {
+    memberNo: memberNo,
+    name: document.getElementById("name").value,
+    dob: document.getElementById("dob").value,
+    mobile: document.getElementById("mobile").value,
+    address: document.getElementById("address").value,
+    designation: document.getElementById("designation").value
+  });
+
+  alert("உறுப்பினர் பதிவு வெற்றிகரமாக முடிந்தது.\nஉறுப்பினர் எண்: " + memberNo);
+
+  form.reset();
+
+});
+
+</script><body>
+
+<div class="container">
+
+<h2>திருவண்ணாமலை முஸ்லிம் சங்கம் (TMS)</h2>
+
+<h3>உறுப்பினர் பதிவு</h3>
+
+<form id="memberForm">
+
+<label>பெயர்</label>
+<input type="text" id="name" required>
+
+<label>பிறந்த தேதி</label>
+<input type="date" id="dob" required>
+
+<label>மொபைல் எண்</label>
+<input type="tel" id="mobile" required>
+
+<label>முகவரி</label>
+<textarea id="address" required></textarea>
+
+<label>பதவி</label>
+
+<select id="designation">
+<option>உறுப்பினர்</option>
+<option>தலைவர்</option>
+<option>செயலாளர்</option>
+<option>பொருளாளர்</option>
+<option>இணை செயலாளர்</option>
+<option>மாவட்ட தலைவர்</option>
+<option>மாவட்ட செயலாளர்</option>
+</select>
+
+<button type="submit">
+உறுப்பினர் பதிவு செய்
+</button>
+
+</form>
+
+</div>
