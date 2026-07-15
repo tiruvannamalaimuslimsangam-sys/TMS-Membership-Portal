@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TMS உறுப்பினர் அடையாள அட்டை</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#f3f3f3;
+display:flex;
+justify-content:center;
+padding:20px;
+}
+
+.id-card{
+width:350px;
+background:#fff;
+border:2px solid green;
+border-radius:10px;
+padding:20px;
+text-align:center;
+box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+.photo-box img{
+width:120px;
+height:120px;
+border-radius:50%;
+border:2px solid green;
+object-fit:cover;
+}
+
+p{
+text-align:left;
+margin:8px 0;
+}
+
+button{
+margin-top:20px;
+padding:10px 20px;
+background:green;
+color:#fff;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="id-card">
+
+<h2>திருவண்ணாமலை முஸ்லிம் சங்கம்</h2>
+<h3>(TMS)</h3>
+
+<div class="photo-box">
+<img id="memberPhoto" src="images/user.png">
+</div>
+
+<p><b>உறுப்பினர் எண் :</b> <span id="memberNo"></span></p>
+<p><b>பெயர் :</b> <span id="memberName"></span></p>
+<p><b>மொபைல் :</b> <span id="memberMobile"></span></p>
+<p><b>முகவரி :</b> <span id="memberAddress"></span></p>
+
+<p id="designationBox">
+<b>பதவி :</b>
+<span id="memberDesignation"></span>
+</p>
+
+<button onclick="window.print()">
+Print ID Card
+</button>
+
+</div>
+
+<script type="module" src="idcard.js"></script>
+
+</body>
+</html>
