@@ -40,12 +40,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
       // வெற்றி செய்தி
       alert(
-        "பதிவு வெற்றிகரமாக முடிந்தது.\n\n" +
-        "உறுப்பினர் எண்: " + memberNo
-      );
+  "பதிவு வெற்றிகரமாக முடிந்தது.\n\n" +
+  "உறுப்பினர் எண்: " + memberNo
+);
 
-      // ID Card பக்கத்திற்கு செல்லும்
-      window.location.href = "idcard.html?id=" + docRef.id;
+const url = "idcard.html?id=" + docRef.id;
+alert(url);
+
+window.location.href = url;
 
     } catch (error) {
 
