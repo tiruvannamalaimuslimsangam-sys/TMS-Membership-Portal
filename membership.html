@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ta">
-
 <head>
 
 <meta charset="UTF-8">
@@ -16,7 +15,7 @@
 
 <div class="container">
 
-<img src="images_logo.png (1).jpg" class="logo" alt="TMS Logo">
+<img src="images_logo.png (1).jpg" class="logo">
 
 <h2>திருவண்ணாமலை முஸ்லிம் சங்கம்</h2>
 
@@ -24,44 +23,60 @@
 
 <form id="memberForm">
 
-<label>பெயர்</label>
+<label>உறுப்பினர் புகைப்படம்</label>
+
+<input
+type="file"
+id="photo"
+accept="image/*"
+required>
+
+<div class="photo-preview">
+
+<img
+id="preview"
+src="images/user.png"
+alt="Preview">
+
+</div>
+
+<label>முழு பெயர்</label>
+
 <input
 type="text"
 id="name"
-placeholder="முழு பெயர்"
 required>
 
 <label>பிறந்த தேதி</label>
+
 <input
 type="date"
 id="dob"
 required>
 
 <label>மொபைல் எண்</label>
+
 <input
 type="tel"
 id="mobile"
-maxlength="10"
-placeholder="9876543210"
 required>
 
 <label>முகவரி</label>
+
 <textarea
 id="address"
-rows="4"
-placeholder="முழு முகவரியை உள்ளிடவும்"
+rows="3"
 required></textarea>
 
 <label>பதவி (இருந்தால் மட்டும்)</label>
 
 <input
 type="text"
-id="designation"
-placeholder="தலைவர் / செயலாளர் / பொருளாளர்">
+id="designation">
 
-<br><br>
-
-<button type="submit" class="btn">
+<button
+type="submit"
+class="submit-btn">
 
 உறுப்பினர் பதிவு செய்
 
@@ -69,19 +84,35 @@ placeholder="தலைவர் / செயலாளர் / பொருளா�
 
 </form>
 
-<br>
-
-<a href="index.html">
-
-<button class="btn">
-
-முகப்பு பக்கம்
-
-</button>
-
-</a>
-
 </div>
+
+<script>
+
+const photo=document.getElementById("photo");
+
+const preview=document.getElementById("preview");
+
+photo.addEventListener("change",function(){
+
+const file=this.files[0];
+
+if(file){
+
+const reader=new FileReader();
+
+reader.onload=function(e){
+
+preview.src=e.target.result;
+
+}
+
+reader.readAsDataURL(file);
+
+}
+
+});
+
+</script>
 
 <script type="module" src="register.js"></script>
 
