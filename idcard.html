@@ -1,52 +1,13 @@
 <!DOCTYPE html>
 <html lang="ta">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>TMS உறுப்பினர் அடையாள அட்டை</title>
 
-<style>
-body{
-font-family:Arial,sans-serif;
-background:#f3f3f3;
-display:flex;
-justify-content:center;
-padding:20px;
-}
-
-.id-card{
-width:350px;
-background:#fff;
-border:2px solid green;
-border-radius:10px;
-padding:20px;
-text-align:center;
-box-shadow:0 0 10px rgba(0,0,0,.2);
-}
-
-.photo-box img{
-width:120px;
-height:120px;
-border-radius:50%;
-border:2px solid green;
-object-fit:cover;
-}
-
-p{
-text-align:left;
-margin:8px 0;
-}
-
-button{
-margin-top:20px;
-padding:10px 20px;
-background:green;
-color:#fff;
-border:none;
-border-radius:5px;
-cursor:pointer;
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -54,25 +15,115 @@ cursor:pointer;
 
 <div class="id-card">
 
-<h2>திருவண்ணாமலை முஸ்லிம் சங்கம்</h2>
-<h3>(TMS)</h3>
+<!-- Logo -->
 
-<div class="photo-box">
-<img id="memberPhoto" src="images/user.png">
+<div class="logo-area">
+
+<img src="images_logo.png (1).jpg"
+alt="TMS Logo"
+class="logo">
+
 </div>
 
-<p><b>உறுப்பினர் எண் :</b> <span id="memberNo"></span></p>
-<p><b>பெயர் :</b> <span id="memberName"></span></p>
-<p><b>மொபைல் :</b> <span id="memberMobile"></span></p>
-<p><b>முகவரி :</b> <span id="memberAddress"></span></p>
+<!-- Title -->
 
-<p id="designationBox">
-<b>பதவி :</b>
-<span id="memberDesignation"></span>
+<h2>திருவண்ணாமலை முஸ்லிம் சங்கம்</h2>
+
+<h3>(TMS)</h3>
+
+<!-- Flag -->
+
+<img src="images_flag.png.jpg"
+class="flag"
+alt="TMS Flag">
+
+<!-- Leaders -->
+
+<img src="images_leaders.jpg"
+class="leaders"
+alt="Policy Leaders">
+
+<!-- Member Photo -->
+
+<div class="photo-box">
+
+<img
+id="memberPhoto"
+src="images/user.png"
+alt="Member Photo">
+
+</div>
+
+<!-- Member Details -->
+
+<div class="details">
+
+<p>
+<b>உறுப்பினர் எண் :</b>
+<span id="memberNo"></span>
 </p>
 
+<p>
+<b>பெயர் :</b>
+<span id="memberName"></span>
+</p>
+
+<p>
+<b>மொபைல் :</b>
+<span id="memberMobile"></span>
+</p>
+
+<p>
+<b>முகவரி :</b>
+<span id="memberAddress"></span>
+</p>
+
+<p id="designationBox">
+
+<b>பதவி :</b>
+
+<span id="memberDesignation"></span>
+
+</p>
+
+</div>
+
+<!-- Signatures -->
+
+<div class="signature-section">
+
+<div>
+
+<img
+src="images_president-sign.png.jpg"
+class="sign">
+
+<p>
+<b>தலைவர்</b><br>
+பாஷா
+</p>
+
+</div>
+
+<div>
+
+<img
+src="images_secretary-sign.png.jpg"
+class="sign">
+
+<p>
+<b>பொதுச் செயலாளர்</b><br>
+காஜா
+</p>
+
+</div>
+
+</div>
+
 <button onclick="window.print()">
-Print ID Card
+
+🖨️ Print ID Card
+
 </button>
 
 </div>

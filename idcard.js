@@ -9,32 +9,41 @@ const params = new URLSearchParams(window.location.search);
 const memberId = params.get("id");
 
 if (!memberId) {
-    alert("உறுப்பினர் ID கிடைக்கவில்லை.");
-    throw new Error("Member ID missing");
+  alert("உறுப்பினர் ID கிடைக்கவில்லை.");
+  throw new Error("Member ID missing");
 }
 
-const docRef = doc(db, "members", memberId);
-const docSnap = await getDoc(docRef);
+try {
 
-if (!docSnap.exists()) {
+  const docRef = doc(db, "members", memberId);
+  const docSnap = await getDoc(docRef);
+
+  if (!docSnap.exists()) {
     alert("உறுப்பினர் விவரம் கிடைக்கவில்லை.");
     throw new Error("Member not found");
-}
+  }
 
-const data = docSnap.data();
+  const data = docSnap.data();
 
-document.getElementById("memberNo").textContent = data.memberNo || "";
-document.getElementById("memberName").textContent = data.name || "";
-document.getElementById("memberMobile").textContent = data.mobile || "";
-document.getElementById("memberAddress").textContent = data.address || "";
+  document.getElementById("memberNo").textContent = data.memberNo || "";
+  document.getElementById("memberName").textContent = data.name || "";
+  document.getElementById("memberMobile").textContent = data.mobile || "";
+  document.getElementById("memberAddress").textContent = data.address || "";
 
-if (data.designation && data.designation.trim() !== "") {
+  if (data.designation && data.designation.trim() !== "") {
     document.getElementById("memberDesignation").textContent = data.designation;
     document.getElementById("designationBox").style.display = "block";
-} else {
+  } else {
     document.getElementById("designationBox").style.display = "none";
-}
+  }
 
-if (data.photoURL) {
+  if (data.photoURL) {
     document.getElementById("memberPhoto").src = data.photoURL;
+  }
+
+} catch (error) {
+
+  console.error(error);
+  alert("பிழை: " + error.message);
+
 }
