@@ -2,6 +2,7 @@
 <html lang="ta">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,39 +16,72 @@
 
 <div class="container">
 
-<h2>திருவண்ணாமலை முஸ்லிம் சங்கம் (TMS)</h2>
+<img src="images_logo.png (1).jpg" class="logo" alt="TMS Logo">
+
+<h2>திருவண்ணாமலை முஸ்லிம் சங்கம்</h2>
 
 <h3>உறுப்பினர் பதிவு</h3>
 
 <form id="memberForm">
 
-<label for="name">பெயர்</label>
-<input type="text" id="name" required>
-
-<label for="dob">பிறந்த தேதி</label>
-<input type="date" id="dob" required>
-
-<label for="mobile">மொபைல் எண்</label>
-<input type="tel" id="mobile" maxlength="10" required>
-<label for="address">முகவரி</label>
-<textarea
-    id="address"
-    rows="4"
-    placeholder="முழு முகவரியை உள்ளிடவும்"
-    required></textarea>
-
-<label for="designation">பதவி (இருந்தால் மட்டும்)</label>
+<label>பெயர்</label>
 <input
-    type="text"
-    id="designation"
-    placeholder="உதா: தலைவர், செயலாளர், பொருளாளர் (இல்லையெனில் காலியாக விடவும்)">
+type="text"
+id="name"
+placeholder="முழு பெயர்"
+required>
 
-<button type="submit">
-    உறுப்பினர் பதிவு செய்
+<label>பிறந்த தேதி</label>
+<input
+type="date"
+id="dob"
+required>
+
+<label>மொபைல் எண்</label>
+<input
+type="tel"
+id="mobile"
+maxlength="10"
+placeholder="9876543210"
+required>
+
+<label>முகவரி</label>
+<textarea
+id="address"
+rows="4"
+placeholder="முழு முகவரியை உள்ளிடவும்"
+required></textarea>
+
+<label>பதவி (இருந்தால் மட்டும்)</label>
+
+<input
+type="text"
+id="designation"
+placeholder="தலைவர் / செயலாளர் / பொருளாளர்">
+
+<br><br>
+
+<button type="submit" class="btn">
+
+உறுப்பினர் பதிவு செய்
+
 </button>
 
 </form>
-    </div>
+
+<br>
+
+<a href="index.html">
+
+<button class="btn">
+
+முகப்பு பக்கம்
+
+</button>
+
+</a>
+
+</div>
 
 <script type="module" src="register.js"></script>
 
