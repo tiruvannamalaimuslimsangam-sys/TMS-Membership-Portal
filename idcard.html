@@ -1,137 +1,126 @@
-
 <!DOCTYPE html>
 <html lang="ta">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMS உறுப்பினர் அடையாள அட்டை</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>TMS உறுப்பினர் அடையாள அட்டை</title>
-
-<link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 <div class="id-card">
 
-<!-- Logo -->
+    <!-- Header -->
+    <div class="card-header">
 
-<div class="logo-area">
+        <img src="images_logo.png (1).jpg"
+             alt="TMS Logo"
+             class="logo">
 
-<img src="images_logo.png (1).jpg"
-class="logo"
-alt="TMS Logo">
+        <div class="title">
 
-</div>
+            <h2>திருவண்ணாமலை முஸ்லிம் சங்கம்</h2>
 
-<!-- சங்கம் -->
+            <p>MEMBER ID CARD</p>
 
-<h3 style="text-align:center;">
-திருவண்ணாமலை முஸ்லிம் சங்கம்
-</h3>
+        </div>
 
-<!-- Flag -->
+    </div>
 
-<img
-src="images_flag.png.jpg"
-class="flag"
-alt="TMS Flag">
+    <!-- Card Body -->
 
-<!-- Member Photo -->
+    <div class="card-body">
 
-<div class="photo-box">
+        <!-- Left Side -->
 
-<img
-id="memberPhoto"
-src="images/user.png"
-alt="Member Photo">
+        <div class="details">
 
-</div>
+            <p>
+                <b>உறுப்பினர் எண் :</b>
+                <span id="memberNo"></span>
+            </p>
 
-<!-- Details -->
+            <p>
+                <b>பெயர் :</b>
+                <span id="memberName"></span>
+            </p>
 
-<div class="details">
+            <p>
+                <b>மொபைல் :</b>
+                <span id="memberMobile"></span>
+            </p>
 
-<p>
-<b>உறுப்பினர் எண் :</b>
-<span id="memberNo"></span>
-</p>
+            <p>
+                <b>முகவரி :</b>
+                <span id="memberAddress"></span>
+            </p>
 
-<p>
-<b>பெயர் :</b>
-<span id="memberName"></span>
-</p>
+            <p id="designationBox">
+                <b>பதவி :</b>
+                <span id="memberDesignation"></span>
+            </p>
 
-<p>
-<b>மொபைல் :</b>
-<span id="memberMobile"></span>
-</p>
+        </div>
 
-<p>
-<b>முகவரி :</b>
-<span id="memberAddress"></span>
-</p>
+        <!-- Right Side -->
 
-<p id="designationBox">
+        <div class="photo-box">
 
-<b>பதவி :</b>
+            <img
+                id="memberPhoto"
+                src="images/user.png"
+                alt="Member Photo">
 
-<span id="memberDesignation"></span>
+        </div>
 
-</p>
+    </div>
 
-</div>
+    <!-- Signatures -->
 
-<!-- Signatures -->
+    <div class="signature-section">
 
-<div class="signature-section">
+        <div>
 
-<div>
+            <img
+                src="images_president-sign.png.jpg"
+                class="sign"
+                alt="President Signature">
 
-<img
-src="images_president-sign.png.jpg"
-class="sign"
-alt="President Signature">
+            <p>
 
-<p>
+                <b>தலைவர்</b><br>
 
-<b>தலைவர்</b><br>
+                திருவண்ணாமலை முஸ்லிம் சங்கம்
 
-திருவண்ணாமலை முஸ்லிம் சங்கம்
+            </p>
 
-</p>
+        </div>
 
-</div>
+        <div>
 
-<div>
+            <img
+                src="images_secretary-sign.png.jpg"
+                class="sign"
+                alt="Secretary Signature">
 
-<img
-src="images_secretary-sign.png.jpg"
-class="sign"
-alt="Secretary Signature">
+            <p>
 
-<p>
+                <b>பொதுச் செயலாளர்</b><br>
 
-<b>பொதுச் செயலாளர்</b><br>
+                திருவண்ணாமலை முஸ்லிம் சங்கம்
 
-திருவண்ணாமலை முஸ்லிம் சங்கம்
+            </p>
 
-</p>
+        </div>
 
-</div>
+    </div>
 
-</div>
-
-<br>
-
-<button onclick="window.print()">
-
-🖨️ Print ID Card
-
-</button>
+    <button onclick="window.print()">
+        🖨️ Print ID Card
+    </button>
 
 </div>
 
