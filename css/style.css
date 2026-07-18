@@ -299,3 +299,41 @@ button{
         page-break-inside:avoid;
     }
 }
+/* ===== TMS Flag ===== */
+
+.flag {
+    width: 100%;
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* ===== ID Card ===== */
+
+.id-card {
+    width: 340px;
+    max-width: 95%;
+    margin: 30px auto;
+    padding: 15px;
+    background: #fff;
+    border: 2px solid #0b6b2d;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+/* Mobile */
+
+@media (max-width:600px){
+
+    .id-card{
+        width:95%;
+        max-width:340px;
+    }
+
+    .flag{
+        width:100%;
+        height:auto;
+    }
+
+}
