@@ -447,3 +447,198 @@ button{
     }
 
 }
+
+/* =========================================
+   TMS ATM MEMBER ID CARD - PART 1
+========================================= */
+
+.id-card{
+    width:340px;
+    height:215px;
+    margin:20px auto;
+    background:#ffffff;
+    border:2px solid #0b6b35;
+    border-radius:12px;
+    box-shadow:0 6px 15px rgba(0,0,0,.20);
+    padding:12px;
+    box-sizing:border-box;
+    overflow:hidden;
+}
+
+.card-header{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border-bottom:1px solid #0b6b35;
+    padding-bottom:6px;
+    margin-bottom:8px;
+}
+
+.card-header .logo{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+}
+
+.header-text{
+    flex:1;
+}
+
+.header-text h2{
+    margin:0;
+    font-size:13px;
+    color:#0b6b35;
+    font-weight:bold;
+    text-align:left;
+}
+
+.header-text p{
+    margin:2px 0 0;
+    font-size:9px;
+    color:#555;
+    font-weight:bold;
+    letter-spacing:1px;
+    text-align:left;
+}
+
+.card-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:10px;
+}
+/* =========================================
+   TMS ATM MEMBER ID CARD - PART 2
+========================================= */
+
+.member-details{
+    flex:1;
+}
+
+.member-details p{
+    margin:3px 0;
+    font-size:10px;
+    line-height:1.4;
+    color:#222;
+}
+
+.photo-section{
+    width:75px;
+    text-align:center;
+}
+
+.photo-section img{
+    width:65px;
+    height:80px;
+    border:1px solid #0b6b35;
+    border-radius:6px;
+    object-fit:cover;
+    background:#fff;
+}
+
+.signature-section{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-top:8px;
+}
+
+.signature-box{
+    width:48%;
+    text-align:center;
+}
+
+.sign{
+    width:50px;
+    height:auto;
+}
+
+.signature-box p{
+    margin-top:2px;
+    font-size:7px;
+    line-height:1.2;
+    color:#222;
+}
+
+.print-area{
+    text-align:center;
+    margin-top:15px;
+}
+
+.print-area button{
+    padding:8px 18px;
+    background:#0b6b35;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:14px;
+}
+/* =========================================
+   TMS ATM MEMBER ID CARD - PART 3
+========================================= */
+
+@media print{
+
+    body{
+        margin:0;
+        padding:0;
+        background:#ffffff;
+    }
+
+    .print-area{
+        display:none;
+    }
+
+    .id-card{
+        width:85.6mm;
+        height:54mm;
+        margin:0;
+        border:1px solid #0b6b35;
+        border-radius:8px;
+        box-shadow:none;
+        page-break-after:avoid;
+        overflow:hidden;
+    }
+
+    .card-header .logo{
+        width:35px;
+        height:35px;
+    }
+
+    .header-text h2{
+        font-size:11px;
+    }
+
+    .header-text p{
+        font-size:8px;
+    }
+
+    .member-details p{
+        font-size:8px;
+        margin:2px 0;
+    }
+
+    .photo-section img{
+        width:55px;
+        height:68px;
+    }
+
+    .sign{
+        width:40px;
+    }
+
+    .signature-box p{
+        font-size:6px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .id-card{
+        width:340px;
+        max-width:95%;
+    }
+
+}
