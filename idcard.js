@@ -1,3 +1,4 @@
+
 import { db } from "./firebase-config.js";
 
 import {
@@ -13,37 +14,67 @@ if (!memberId) {
   throw new Error("Member ID missing");
 }
 
-try {
+async function loadMember() {
 
-  const docRef = doc(db, "members", memberId);
-  const docSnap = await getDoc(docRef);
+  try {
 
-  if (!docSnap.exists()) {
-    alert("உறுப்பினர் விவரம் கிடைக்கவில்லை.");
-    throw new Error("Member not found");
+    const docRef = doc(db, "members", memberId);
+    const docSnap = await getDoc(docRef);
+
+    if (!docSnap.exists()) {
+      alert("உறுப்பினர் விவரம் கிடைக்கவில்லை.");
+      return;
+    }
+
+    const data = docSnap.data();
+
+    document.getElementById("memberNo").textContent =
+      data.memberNo || "";
+
+    document.getElementById("memberName").textContent =
+      data.name || "";
+
+    document.getElementById("memberMobile").textContent =
+      data.mobile || "";
+
+    document.getElementById("memberAddress").textContent =
+      data.address || "";
+
+    if (data.designation && data.designation.trim() !== "") {
+
+      document.getElementById("memberDesignation").textContent =
+        data.designation;
+
+      document.getElementById("designationBox").style.display =
+        "block";
+
+    } else {
+
+      document.getElementById("designationBox").style.display =
+        "none";
+
+    }
+
+    if (data.photo) {
+
+      document.getElementById("memberPhoto").src =
+        data.photo;
+
+    } else {
+
+      document.getElementById("memberPhoto").src =
+        "images/user.png";
+
+    }
+
+  } catch (error) {
+
+    console.error(error);
+
+    alert("பிழை : " + error.message);
+
   }
-
-  const data = docSnap.data();
-
-  document.getElementById("memberNo").textContent = data.memberNo || "";
-  document.getElementById("memberName").textContent = data.name || "";
-  document.getElementById("memberMobile").textContent = data.mobile || "";
-  document.getElementById("memberAddress").textContent = data.address || "";
-
-  if (data.designation && data.designation.trim() !== "") {
-    document.getElementById("memberDesignation").textContent = data.designation;
-    document.getElementById("designationBox").style.display = "block";
-  } else {
-    document.getElementById("designationBox").style.display = "none";
-  }
-
-  if (data.photoURL) {
-    document.getElementById("memberPhoto").src = data.photoURL;
-  }
-
-} catch (error) {
-
-  console.error(error);
-  alert("பிழை: " + error.message);
 
 }
+
+loadMember();
