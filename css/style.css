@@ -642,3 +642,183 @@ button{
     }
 
 }
+/* ===========================================
+   TMS PROFESSIONAL ATM MEMBER CARD - PART 1
+=========================================== */
+
+.id-card{
+    width:340px;
+    height:215px;
+    margin:20px auto;
+    background:linear-gradient(135deg,#0b6b35,#128c4a,#1ca85c);
+    border-radius:15px;
+    border:2px solid #d4af37;
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+    padding:12px;
+    box-sizing:border-box;
+    color:#ffffff;
+    overflow:hidden;
+}
+
+.card-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    padding-bottom:6px;
+    margin-bottom:8px;
+}
+
+.header-logo,
+.header-flag{
+    width:42px;
+    text-align:center;
+}
+
+.logo,
+.flag{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+    border-radius:50%;
+    background:#fff;
+    padding:2px;
+}
+
+.header-title{
+    flex:1;
+    text-align:center;
+}
+
+.header-title h2{
+    margin:0;
+    font-size:13px;
+    color:#fff;
+    font-weight:bold;
+}
+
+.header-title h3{
+    margin:2px 0;
+    font-size:14px;
+    color:#ffd700;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.header-title p{
+    margin:0;
+    font-size:8px;
+    color:#ffffff;
+    letter-spacing:1px;
+}
+/* ===========================================
+   TMS PROFESSIONAL ATM MEMBER CARD - PART 2
+=========================================== */
+
+.card-body{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    margin-top:8px;
+}
+
+.photo-section{
+    width:78px;
+    text-align:center;
+}
+
+.photo-section img{
+    width:70px;
+    height:85px;
+    object-fit:cover;
+    border:2px solid #ffd700;
+    border-radius:8px;
+    background:#ffffff;
+}
+
+.member-details{
+    flex:1;
+    margin-left:10px;
+}
+
+.member-details table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.member-details td{
+    padding:3px 2px;
+    font-size:10px;
+    color:#ffffff;
+    vertical-align:top;
+}
+
+.member-details td:first-child{
+    width:78px;
+    font-weight:bold;
+    color:#ffe082;
+}
+
+.member-details td:nth-child(2){
+    width:8px;
+    text-align:center;
+    color:#ffffff;
+}
+
+.member-details td:last-child{
+    color:#ffffff;
+    word-break:break-word;
+}
+/* ===========================================
+   TMS PROFESSIONAL ATM MEMBER CARD - PART 3
+=========================================== */
+
+.signature-section{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-top:8px;
+    border-top:1px solid rgba(255,255,255,.4);
+    padding-top:6px;
+}
+
+.signature-box{
+    width:48%;
+    text-align:center;
+}
+
+.sign{
+    width:48px;
+    height:auto;
+    display:block;
+    margin:0 auto 2px;
+}
+
+.signature-box p{
+    margin:0;
+    font-size:7px;
+    line-height:1.2;
+    color:#ffffff;
+}
+
+.print-area{
+    text-align:center;
+    margin-top:15px;
+}
+
+.print-area button{
+    background:#0b6b35;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    padding:8px 18px;
+    font-size:14px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.print-area button:hover{
+    background:#09592c;
+}
+
+@
