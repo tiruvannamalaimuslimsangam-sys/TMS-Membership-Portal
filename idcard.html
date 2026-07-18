@@ -4,11 +4,12 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TMS Member ID Card</title>
+<title>TMS உறுப்பினர் அடையாள அட்டை</title>
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/idcard.css">
 
 </head>
 
@@ -16,7 +17,7 @@
 
 <div class="id-card">
 
-    <!-- ===== Header ===== -->
+    <!-- Header -->
 
     <div class="card-header">
 
@@ -24,10 +25,9 @@
 
         <div class="header-logo">
 
-            <img
-            src="images_logo.png (1).jpg"
-            class="logo"
-            alt="TMS Logo">
+            <img src="images_logo.png (1).jpg"
+            alt="Logo"
+            class="logo">
 
         </div>
 
@@ -35,17 +35,11 @@
 
         <div class="header-title">
 
-            <h2>
-                திருவண்ணாமலை முஸ்லிம் சங்கம்
-            </h2>
+            <h2>திருவண்ணாமலை முஸ்லிம் சங்கம்</h2>
 
-            <h3>
-                TMS
-            </h3>
+            <h3>TMS</h3>
 
-            <p>
-                MEMBER ID CARD
-            </p>
+            <p>உறுப்பினர் அடையாள அட்டை</p>
 
         </div>
 
@@ -53,22 +47,21 @@
 
         <div class="header-flag">
 
-            <img
-            src="images_flag.png.jpg"
-            class="flag"
-            alt="TMS Flag">
+            <img src="images_flag.png.jpg"
+            alt="Flag"
+            class="flag">
 
         </div>
 
     </div>
 
-    <!-- ===== Card Body ===== -->
+    <!-- Body -->
 
     <div class="card-body">
 
         <!-- Member Photo -->
 
-        <div class="photo-section">
+        <div class="photo-box">
 
             <img
             id="memberPhoto"
@@ -79,7 +72,7 @@
 
         <!-- Member Details -->
 
-        <div class="member-details">
+        <div class="details">
 
             <table>
 
@@ -145,16 +138,13 @@
         <div class="signature-box">
 
             <img
-            src="images_president-sign.png.jpg"
-            class="sign"
-            alt="President Signature">
+                src="images_president-sign.png.jpg"
+                class="sign"
+                alt="President Signature">
 
             <p>
-
-                <b>தலைவர்</b><br>
-
+                <strong>தலைவர்</strong><br>
                 திருவண்ணாமலை முஸ்லிம் சங்கம் (TMS)
-
             </p>
 
         </div>
@@ -162,16 +152,13 @@
         <div class="signature-box">
 
             <img
-            src="images_secretary-sign.png.jpg"
-            class="sign"
-            alt="Secretary Signature">
+                src="images_secretary-sign.png.jpg"
+                class="sign"
+                alt="Secretary Signature">
 
             <p>
-
-                <b>பொதுச் செயலாளர்</b><br>
-
+                <strong>பொதுச் செயலாளர்</strong><br>
                 திருவண்ணாமலை முஸ்லிம் சங்கம் (TMS)
-
             </p>
 
         </div>
@@ -183,9 +170,7 @@
 <div class="print-area">
 
     <button onclick="window.print()">
-
-        🖨️ Print Member ID Card
-
+        🖨️ உறுப்பினர் அட்டையை அச்சிடு
     </button>
 
 </div>
@@ -193,4 +178,5 @@
 <script type="module" src="idcard.js"></script>
 
 </body>
+
 </html>
