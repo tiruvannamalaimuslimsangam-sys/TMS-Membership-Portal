@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ta">
+
 <head>
 
 <meta charset="UTF-8">
@@ -15,100 +16,111 @@
 
 <div class="container">
 
-<img src="images_logo.png (1).jpg" class="logo">
+    <!-- Logo -->
+    <img src="images_logo.png (1).jpg"
+         class="logo"
+         alt="TMS Logo">
 
-<h2>திருவண்ணாமலை முஸ்லிம் சங்கம்</h2>
+    <!-- Title -->
+    <h1>திருவண்ணாமலை முஸ்லிம் சங்கம்</h1>
 
-<h3>உறுப்பினர் பதிவு</h3>
+    <h2>உறுப்பினர் பதிவு</h2>
 
-<form id="memberForm">
+    <p class="subtitle">
+        TMS Membership Registration
+    </p>
 
-<label>உறுப்பினர் புகைப்படம்</label>
+    <form id="memberForm">
 
-<input
-type="file"
-id="photo"
-accept="image/*"
-required>
+        <label>உறுப்பினர் புகைப்படம்</label>
 
-<div class="photo-preview">
+        <input
+            type="file"
+            id="photo"
+            accept="image/*"
+            required>
 
-<img
-id="preview"
-src="images/user.png"
-alt="Preview">
+        <div class="photo-preview">
 
-</div>
+            <img
+                id="preview"
+                src="images/user.png"
+                alt="Preview">
 
-<label>முழு பெயர்</label>
+        </div>
 
-<input
-type="text"
-id="name"
-required>
+        <label>முழு பெயர்</label>
 
-<label>பிறந்த தேதி</label>
+        <input
+            type="text"
+            id="name"
+            placeholder="முழு பெயரை உள்ளிடவும்"
+            required>
 
-<input
-type="date"
-id="dob"
-required>
+        <label>பிறந்த தேதி</label>
 
-<label>மொபைல் எண்</label>
+        <input
+            type="date"
+            id="dob"
+            required>
 
-<input
-type="tel"
-id="mobile"
-required>
+        <label>மொபைல் எண்</label>
 
-<label>முகவரி</label>
+        <input
+            type="tel"
+            id="mobile"
+            placeholder="9876543210"
+            required>
 
-<textarea
-id="address"
-rows="3"
-required></textarea>
+        <label>முகவரி</label>
 
-<label>பதவி (இருந்தால் மட்டும்)</label>
+        <textarea
+            id="address"
+            rows="3"
+            placeholder="முழு முகவரி"
+            required></textarea>
 
-<input
-type="text"
-id="designation">
+        <label>பதவி (இருந்தால் மட்டும்)</label>
 
-<button
-type="submit"
-class="submit-btn">
+        <input
+            type="text"
+            id="designation"
+            placeholder="உதா: தலைவர்">
 
-உறுப்பினர் பதிவு செய்
+        <button
+            type="submit"
+            class="submit-btn">
 
-</button>
+            📝 உறுப்பினர் பதிவு செய்
 
-</form>
+        </button>
+
+    </form>
 
 </div>
 
 <script>
 
-const photo=document.getElementById("photo");
+const photo = document.getElementById("photo");
+const preview = document.getElementById("preview");
 
-const preview=document.getElementById("preview");
+photo.addEventListener("change", function () {
 
-photo.addEventListener("change",function(){
+    const file = this.files[0];
 
-const file=this.files[0];
+    if (file) {
 
-if(file){
+        const reader = new FileReader();
 
-const reader=new FileReader();
+        reader.onload = function (e) {
 
-reader.onload=function(e){
+            preview.src = e.target.result;
 
-preview.src=e.target.result;
+        }
 
-}
+        reader.readAsDataURL(file);
 
-reader.readAsDataURL(file);
-
-}
+    }
 
 });
 
