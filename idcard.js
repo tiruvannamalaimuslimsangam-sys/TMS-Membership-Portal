@@ -40,32 +40,35 @@ async function loadMember() {
     document.getElementById("memberAddress").textContent =
       data.address || "";
 
+    const designationRow = document.getElementById("designationBox");
+
     if (data.designation && data.designation.trim() !== "") {
 
       document.getElementById("memberDesignation").textContent =
         data.designation;
 
-      document.getElementById("designationBox").style.display =
-        "block";
+      designationRow.style.display = "table-row";
 
     } else {
 
-      document.getElementById("designationBox").style.display =
-        "none";
+      designationRow.style.display = "none";
 
     }
 
-    if (data.photo) {
+    const photo = document.getElementById("memberPhoto");
 
-      document.getElementById("memberPhoto").src =
-        data.photo;
+    if (data.photo && data.photo !== "") {
+
+      photo.src = data.photo;
 
     } else {
 
-      document.getElementById("memberPhoto").src =
-        "images/user.png";
+      photo.src = "images/user.png";
 
     }
+
+    document.title =
+      data.name + " - உறுப்பினர் அடையாள அட்டை";
 
   } catch (error) {
 
