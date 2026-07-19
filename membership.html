@@ -16,111 +16,130 @@
 
 <div class="container">
 
-    <!-- Logo -->
-    <img src="images_logo.png (1).jpg"
-         class="logo"
-         alt="TMS Logo">
+<div class="card">
 
-    <!-- Title -->
-    <h1>திருவண்ணாமலை முஸ்லிம் சங்கம்</h1>
+<img src="images_logo.png (1).jpg" class="logo" alt="TMS Logo">
 
-    <h2>உறுப்பினர் பதிவு</h2>
+<h1>திருவண்ணாமலை முஸ்லிம் சங்கம்</h1>
 
-    <p class="subtitle">
-        TMS Membership Registration
-    </p>
+<h2>உறுப்பினர் பதிவு</h2>
 
-    <form id="memberForm">
+<p class="subtitle">TMS Membership Registration</p>
 
-        <label>உறுப்பினர் புகைப்படம்</label>
+<form id="memberForm">
 
-        <input
-            type="file"
-            id="photo"
-            accept="image/*"
-            required>
+<div class="photo-area">
 
-        <div class="photo-preview">
+<label for="photo">உறுப்பினர் புகைப்படம்</label>
 
-            <img
-                id="preview"
-                src="images/user.png"
-                alt="Preview">
+<input
+type="file"
+id="photo"
+accept="image/*"
+required>
 
-        </div>
+<img
+id="preview"
+src="images/user.png"
+alt="Preview"
+class="preview">
 
-        <label>முழு பெயர்</label>
+</div>
 
-        <input
-            type="text"
-            id="name"
-            placeholder="முழு பெயரை உள்ளிடவும்"
-            required>
+<div class="input-group">
 
-        <label>பிறந்த தேதி</label>
+<label>முழு பெயர்</label>
 
-        <input
-            type="date"
-            id="dob"
-            required>
+<input
+type="text"
+id="name"
+placeholder="முழு பெயர்"
+required>
 
-        <label>மொபைல் எண்</label>
+</div>
 
-        <input
-            type="tel"
-            id="mobile"
-            placeholder="9876543210"
-            required>
+<div class="input-group">
 
-        <label>முகவரி</label>
+<label>பிறந்த தேதி</label>
 
-        <textarea
-            id="address"
-            rows="3"
-            placeholder="முழு முகவரி"
-            required></textarea>
+<input
+type="date"
+id="dob"
+required>
 
-        <label>பதவி (இருந்தால் மட்டும்)</label>
+</div>
 
-        <input
-            type="text"
-            id="designation"
-            placeholder="உதா: தலைவர்">
+<div class="input-group">
 
-        <button
-            type="submit"
-            class="submit-btn">
+<label>மொபைல் எண்</label>
 
-            📝 உறுப்பினர் பதிவு செய்
+<input
+type="tel"
+id="mobile"
+placeholder="9876543210"
+required>
 
-        </button>
+</div>
 
-    </form>
+<div class="input-group">
+
+<label>முகவரி</label>
+
+<textarea
+id="address"
+rows="3"
+placeholder="முகவரி"
+required></textarea>
+
+</div>
+
+<div class="input-group">
+
+<label>பதவி (இருந்தால் மட்டும்)</label>
+
+<input
+type="text"
+id="designation"
+placeholder="உதா: தலைவர்">
+
+</div>
+
+<button
+type="submit"
+class="submit-btn">
+
+📋 உறுப்பினர் பதிவு செய்
+
+</button>
+
+</form>
+
+</div>
 
 </div>
 
 <script>
 
-const photo = document.getElementById("photo");
-const preview = document.getElementById("preview");
+const photo=document.getElementById("photo");
+const preview=document.getElementById("preview");
 
-photo.addEventListener("change", function () {
+photo.addEventListener("change",function(){
 
-    const file = this.files[0];
+const file=this.files[0];
 
-    if (file) {
+if(file){
 
-        const reader = new FileReader();
+const reader=new FileReader();
 
-        reader.onload = function (e) {
+reader.onload=function(e){
 
-            preview.src = e.target.result;
+preview.src=e.target.result;
 
-        }
+}
 
-        reader.readAsDataURL(file);
+reader.readAsDataURL(file);
 
-    }
+}
 
 });
 
@@ -129,4 +148,5 @@ photo.addEventListener("change", function () {
 <script type="module" src="register.js"></script>
 
 </body>
+
 </html>
