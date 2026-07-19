@@ -1,7 +1,7 @@
-/* ===========================================
+/* ==========================================
    TMS PROFESSIONAL ATM MEMBER CARD
-   Part 1 - Card Layout & Header
-=========================================== */
+   idcard.css - PART 1
+========================================== */
 
 *{
     margin:0;
@@ -11,369 +11,263 @@
 }
 
 body{
-    background:#f2f5f7;
+    background:#edf5ef;
     display:flex;
     flex-direction:column;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     min-height:100vh;
     padding:20px;
 }
 
 .id-card{
-
     width:340px;
     height:215px;
-
-    background:linear-gradient(135deg,#0b6b35,#148a45,#0f5d2e);
-
-    border:2px solid #d4af37;
-
+    background:linear-gradient(135deg,#0b6b35,#148c45,#0b6b35);
+    border:2px solid #FFD700;
     border-radius:16px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.30);
-
-    overflow:hidden;
-
+    box-shadow:0 10px 20px rgba(0,0,0,.30);
     color:#fff;
-
+    overflow:hidden;
     position:relative;
-
 }
 
-/* ---------- Header ---------- */
+/* ===========================
+   Header
+=========================== */
 
 .card-header{
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
     padding:8px 10px;
-
-    border-bottom:1px solid rgba(255,255,255,.30);
-
+    border-bottom:1px solid rgba(255,255,255,.35);
 }
 
-.header-logo{
-
+.header-logo,
+.header-flag{
     width:48px;
-
     display:flex;
-
     justify-content:center;
+    align-items:center;
+}
 
+.header-logo img,
+.header-flag img{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+    background:#fff;
+    border-radius:50%;
+    padding:2px;
 }
 
 .header-title{
-
     flex:1;
-
     text-align:center;
-
     padding:0 6px;
-
-}
-
-.header-flag{
-
-    width:48px;
-
-    display:flex;
-
-    justify-content:center;
-
-}
-
-.logo,
-.flag{
-
-    width:42px;
-
-    height:42px;
-
-    object-fit:contain;
-
-    background:#ffffff;
-
-    border-radius:50%;
-
-    padding:2px;
-
 }
 
 .header-title h2{
-
     font-size:13px;
-
-    color:#ffffff;
-
-    font-weight:700;
-
+    color:#fff;
     line-height:16px;
-
+    font-weight:bold;
 }
 
 .header-title h3{
-
     font-size:15px;
-
-    color:#ffd700;
-
+    color:#FFD700;
     margin-top:2px;
-
     font-weight:bold;
-
 }
 
 .header-title p{
-
     font-size:9px;
-
+    color:#fff;
     margin-top:2px;
-
-    color:#ffffff;
-
     font-weight:600;
-
-    letter-spacing:.5px;
-
 }
-/* ===========================================
+/* ==========================================
    TMS PROFESSIONAL ATM MEMBER CARD
-   Part 2 - Photo & Member Details
-=========================================== */
+   idcard.css - PART 2
+========================================== */
+
+/* ===========================
+   Card Body
+=========================== */
 
 .card-body{
-
     display:flex;
-
-    align-items:flex-start;
-
     justify-content:space-between;
-
+    align-items:flex-start;
     padding:10px;
-
     gap:10px;
-
 }
 
-/* ---------- Member Photo ---------- */
+/* ===========================
+   Member Photo
+=========================== */
 
 .photo-box{
-
-    width:85px;
-
+    width:82px;
     display:flex;
-
     justify-content:center;
-
+    align-items:flex-start;
 }
 
 .photo-box img{
-
-    width:72px;
-
-    height:88px;
-
+    width:70px;
+    height:85px;
     object-fit:cover;
-
     border:2px solid #FFD700;
-
     border-radius:8px;
-
     background:#ffffff;
-
 }
 
-/* ---------- Member Details ---------- */
+/* ===========================
+   Member Details
+=========================== */
 
 .details{
-
     flex:1;
-
 }
 
 .details table{
-
     width:100%;
-
     border-collapse:collapse;
-
 }
 
 .details td{
-
     padding:3px 2px;
-
     font-size:10px;
-
     color:#ffffff;
-
     vertical-align:top;
-
+    line-height:1.4;
 }
 
 .details td:first-child{
-
-    width:78px;
-
-    color:#FFD700;
-
+    width:82px;
+    color:#FFE082;
     font-weight:bold;
-
     white-space:nowrap;
-
 }
 
 .details td:nth-child(2){
+    width:8px;
+    text-align:center;
+    color:#ffffff;
+}
 
-    width:10
-  /* ===========================================
+.details td:last-child{
+    color:#ffffff;
+    font-weight:500;
+    word-break:break-word;
+}
+
+#designationBox{
+    display:table-row;
+}
+/* ==========================================
    TMS PROFESSIONAL ATM MEMBER CARD
-   Part 3 - Signatures, Print & Responsive
-=========================================== */
+   idcard.css - PART 3 (FINAL)
+========================================== */
 
-/* ---------- Signatures ---------- */
+/* ===========================
+   Signature Section
+=========================== */
 
 .signature-section{
-
     position:absolute;
-
     left:10px;
-
     right:10px;
-
     bottom:8px;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:flex-end;
-
     border-top:1px solid rgba(255,255,255,.35);
-
     padding-top:4px;
-
 }
 
 .signature-box{
-
     width:48%;
-
     text-align:center;
-
 }
 
 .sign{
-
     width:55px;
-
     height:auto;
-
     display:block;
-
     margin:0 auto 2px;
-
 }
 
 .signature-box p{
-
     font-size:7px;
-
     line-height:1.2;
-
     color:#ffffff;
-
+    font-weight:600;
 }
 
-/* ---------- Print Button ---------- */
+/* ===========================
+   Print Button
+=========================== */
 
 .print-area{
-
     margin-top:20px;
-
     text-align:center;
-
 }
 
 .print-area button{
-
     background:#0b6b35;
-
     color:#ffffff;
-
     border:none;
-
-    padding:10px 20px;
-
     border-radius:8px;
-
+    padding:10px 20px;
     font-size:14px;
-
     font-weight:bold;
-
     cursor:pointer;
-
 }
 
 .print-area button:hover{
+    background:#09562b;
+}
 
-    background:#0a5b2d;
+/* ===========================
+   Mobile Responsive
+=========================== */
+
+@media (max-width:480px){
+
+    .id-card{
+        width:340px;
+        max-width:95%;
+    }
 
 }
 
-/* ---------- Print ---------- */
+/* ===========================
+   ATM Card Print Size
+=========================== */
 
 @media print{
 
     body{
-
         background:#ffffff;
-
-        padding:0;
-
         margin:0;
-
+        padding:0;
     }
 
     .print-area{
-
         display:none;
-
     }
 
     .id-card{
-
         width:85.6mm;
-
         height:54mm;
-
         margin:0;
-
-        box-shadow:none;
-
-        border-radius:8px;
-
         border:1px solid #0b6b35;
-
-    }
-
-}
-
-/* ---------- Mobile ---------- */
-
-@media(max-width:480px){
-
-    .id-card{
-
-        width:340px;
-
-        max-width:95%;
-
+        border-radius:8px;
+        box-shadow:none;
     }
 
 }
