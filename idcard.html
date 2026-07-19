@@ -4,11 +4,11 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>TMS உறுப்பினர் அடையாள அட்டை</title>
 
+<link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/idcard.css">
 
 </head>
@@ -18,20 +18,13 @@
 <div class="id-card">
 
     <!-- Header -->
-
     <div class="card-header">
 
-        <!-- Logo -->
-
         <div class="header-logo">
-
             <img src="images_logo.png (1).jpg"
-            alt="Logo"
-            class="logo">
-
+                 class="logo"
+                 alt="TMS Logo">
         </div>
-
-        <!-- Title -->
 
         <div class="header-title">
 
@@ -43,87 +36,62 @@
 
         </div>
 
-        <!-- Flag -->
-
         <div class="header-flag">
-
             <img src="images_flag.png.jpg"
-            alt="Flag"
-            class="flag">
-
+                 class="flag"
+                 alt="TMS Flag">
         </div>
 
     </div>
 
-    <!-- Body -->
+    <!-- Card Body -->
 
     <div class="card-body">
 
-        <!-- Member Photo -->
+        <!-- Photo -->
 
         <div class="photo-box">
 
-            <img
-            id="memberPhoto"
-            src="images/user.png"
-            alt="Member Photo">
+            <img id="memberPhoto"
+                 src="images/user.png"
+                 alt="Member Photo">
 
         </div>
 
-        <!-- Member Details -->
+        <!-- Details -->
 
         <div class="details">
 
             <table>
 
                 <tr>
-
-                    <td><b>உறுப்பினர் எண்</b></td>
-
+                    <td>உறுப்பினர் எண்</td>
                     <td>:</td>
-
-                    <td id="memberNo"></td>
-
+                    <td><span id="memberNo"></span></td>
                 </tr>
 
                 <tr>
-
-                    <td><b>பெயர்</b></td>
-
+                    <td>பெயர்</td>
                     <td>:</td>
-
-                    <td id="memberName"></td>
-
+                    <td><span id="memberName"></span></td>
                 </tr>
 
                 <tr>
-
-                    <td><b>மொபைல்</b></td>
-
+                    <td>மொபைல்</td>
                     <td>:</td>
-
-                    <td id="memberMobile"></td>
-
+                    <td><span id="memberMobile"></span></td>
                 </tr>
 
                 <tr>
-
-                    <td><b>முகவரி</b></td>
-
+                    <td>முகவரி</td>
                     <td>:</td>
-
-                    <td id="memberAddress"></td>
-
+                    <td><span id="memberAddress"></span></td>
                 </tr>
 
                 <tr id="designationBox">
-
-                    <td><b>பதவி</b></td>
-
+                    <td>பதவி</td>
                     <td>:</td>
-
-                    <td id="memberDesignation"></td>
-
+                    <td><span id="memberDesignation"></span></td>
                 </tr>
 
             </table>
@@ -131,16 +99,16 @@
         </div>
 
     </div>
-        <!-- ===== Signatures ===== -->
+
+    <!-- Signature -->
 
     <div class="signature-section">
 
         <div class="signature-box">
 
-            <img
-                src="images_president-sign.png.jpg"
-                class="sign"
-                alt="President Signature">
+            <img src="images_president-sign.png.jpg"
+                 class="sign"
+                 alt="President Signature">
 
             <p>
                 <strong>தலைவர்</strong><br>
@@ -151,10 +119,9 @@
 
         <div class="signature-box">
 
-            <img
-                src="images_secretary-sign.png.jpg"
-                class="sign"
-                alt="Secretary Signature">
+            <img src="images_secretary-sign.png.jpg"
+                 class="sign"
+                 alt="Secretary Signature">
 
             <p>
                 <strong>பொதுச் செயலாளர்</strong><br>
@@ -178,5 +145,4 @@
 <script type="module" src="idcard.js"></script>
 
 </body>
-
 </html>
