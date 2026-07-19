@@ -1,7 +1,7 @@
-/* ======================================
-   TMS WEBSITE - HOME PAGE
-   style.css - Part 1
-====================================== */
+/* ==========================================
+   TMS MEMBERSHIP PORTAL
+   PART 1 - GLOBAL & CONTAINER
+========================================== */
 
 *{
     margin:0;
@@ -11,250 +11,167 @@
 }
 
 body{
-    background:#eef7ef;
-    color:#1b1b1b;
+    background:linear-gradient(135deg,#eef8f0,#f7faf7);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
 }
 
 .container{
-    width:95%;
-    max-width:420px;
-    margin:20px auto;
-    background:#ffffff;
-    border-radius:18px;
-    padding:20px;
-    box-shadow:0 6px 18px rgba(0,0,0,.15);
-    text-align:center;
+    width:100%;
+    max-width:520px;
 }
 
-/* =====================
-   TMS Logo
-===================== */
+.card{
+    background:#ffffff;
+    border-radius:20px;
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+    padding:30px;
+}
 
 .logo{
-    width:90px;
-    height:90px;
+    width:95px;
+    height:95px;
     display:block;
-    margin:0 auto 10px;
+    margin:0 auto 15px;
     object-fit:contain;
 }
 
-/* =====================
-   Heading
-===================== */
-
 h1{
+    text-align:center;
     color:#0b6b35;
-    font-size:26px;
-    margin-bottom:5px;
+    font-size:30px;
+    font-weight:700;
+    line-height:1.3;
 }
 
 h2{
-    color:#157347;
-    font-size:18px;
-    margin-bottom:10px;
-    font-weight:bold;
+    text-align:center;
+    color:#148a45;
+    margin-top:10px;
+    font-size:24px;
 }
 
-p{
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-top:8px;
+    margin-bottom:25px;
     font-size:15px;
-    color:#444;
-    line-height:1.6;
-    margin-bottom:12px;
 }
 
-/* =====================
-   TMS Flag
-===================== */
-
-.flag{
-    display:block;
+form{
     width:100%;
-    max-width:360px;
-    height:auto;
-    margin:15px auto;
-    object-fit:contain;
-    border-radius:10px;
-    border:2px solid #0b6b35;
 }
 
-/* ======================================
-   TMS WEBSITE - HOME PAGE
-   style.css - Part 2
-====================================== */
+.photo-area{
+    text-align:center;
+    margin-bottom:25px;
+}
 
-/* =====================
-   Policy Leaders
-===================== */
-
-.leaders{
+.photo-area label{
     display:block;
-    width:100%;
-    max-width:360px;
-    height:auto;
-    margin:18px auto;
-    border-radius:12px;
-    border:2px solid #0b6b35;
+    font-weight:bold;
+    margin-bottom:10px;
+    color:#333;
+}
+
+.preview{
+    width:150px;
+    height:180px;
+    margin:18px auto 0;
+    display:block;
     object-fit:cover;
-    box-shadow:0 4px 10px rgba(0,0,0,.15);
+    border:3px solid #0b6b35;
+    border-radius:12px;
+    background:#f5f5f5;
+}
+/* ==========================================
+   TMS MEMBERSHIP PORTAL
+   PART 2 - FORM
+========================================== */
+
+.input-group{
+    margin-bottom:18px;
 }
 
-/* =====================
-   Member Registration Button
-===================== */
+.input-group label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:600;
+    color:#333;
+}
 
-.btn{
+.input-group input,
+.input-group textarea{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid #cfd8dc;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+    background:#fff;
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+    border-color:#0b6b35;
+    box-shadow:0 0 8px rgba(11,107,53,.20);
+}
+
+textarea{
+    resize:vertical;
+    min-height:90px;
+}
+
+.submit-btn{
     width:100%;
     padding:14px;
-    background:linear-gradient(135deg,#0b6b35,#169c52);
-    color:#ffffff;
+    background:#0b6b35;
+    color:#fff;
     border:none;
     border-radius:10px;
     font-size:17px;
     font-weight:bold;
     cursor:pointer;
-    transition:0.3s;
+    transition:.3s;
+    margin-top:10px;
 }
 
-.btn:hover{
-    background:linear-gradient(135deg,#09552b,#0f7d40);
-    transform:translateY(-2px);
+.submit-btn:hover{
+    background:#148a45;
+}
+/* ==========================================
+   TMS MEMBERSHIP PORTAL
+   PART 3 - HOME PAGE & RESPONSIVE
+========================================== */
+
+/* Home Page Images */
+
+.flag{
+    width:100%;
+    max-height:180px;
+    object-fit:contain;
+    display:block;
+    margin:20px auto;
+    border-radius:12px;
 }
 
-/* =====================
-   Divider
-===================== */
-
-hr{
-    margin:20px 0;
-    border:none;
-    border-top:2px solid #d6e8d7;
+.leaders{
+    width:100%;
+    display:block;
+    margin:20px auto;
+    border-radius:12px;
 }
 
-/* =====================
-   Contact Section
-===================== */
+/* Buttons */
 
-h3{
-    color:#0b6b35;
-    margin-bottom:15px;
-    font-size:22px;
-}
-
-.container a{
-    color:#0b6b35;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.container a:hover{
-    text-decoration:underline;
-}
-
-.container p{
-    margin:10px 0;
-}
-/* ======================================
-   TMS WEBSITE - HOME PAGE
-   style.css - Part 3 (Final)
-====================================== */
-
-/* Social Links */
-
-.container a{
-    display:inline-block;
-    margin-top:4px;
-    color:#0b6b35;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.container a:hover{
-    color:#0f8a45;
-}
-
-/* Contact Icons */
-
-.contact-item{
-    margin:12px 0;
-}
-
-/* Button Animation */
-
-.btn:active{
-    transform:scale(0.98);
-}
-
-/* Mobile Responsive */
-
-@media (max-width:600px){
-
-    .container{
-        width:95%;
-        padding:18px;
-        margin:15px auto;
-    }
-
-    .logo{
-        width:80px;
-        height:80px;
-    }
-
-    h1{
-        font-size:22px;
-    }
-
-    h2{
-        font-size:17px;
-    }
-
-    h3{
-        font-size:20px;
-    }
-
-    p{
-        font-size:14px;
-    }
-
-    .flag{
-        width:100%;
-        max-width:340px;
-        height:auto;
-        object-fit:contain;
-        border-radius:10px;
-    }
-
-    .leaders{
-        width:100%;
-        max-width:340px;
-        height:auto;
-    }
-
-    .btn{
-        font-size:16px;
-        padding:13px;
-    }
-}
-
-/* Desktop */
-
-@media (min-width:601px){
-
-    .container{
-        max-width:450px;
-    }
-
-    .flag{
-        max-width:380px;
-    }
-
-    .leaders{
-        max-width:380px;
-    }
-
-}
-
-/* Footer Space */
-
-body{
-    padding-bottom:25px;
-}
+.main-btn{
+    width:100%;
+    padding:15px;
+    margin-top:20px;
+    background:#0b6b35;
+    color:#fff;
